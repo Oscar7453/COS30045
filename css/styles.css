@@ -1,0 +1,147 @@
+/*
+  Shared stylesheet for the three-page site.
+  Color scheme matches the power logo: warm beige background, brown text, orange accent.
+*/
+
+:root {
+	--accent: #e59a2f; /* orange bolt */
+	--accent-600: #c47a1c;
+	--accent-700: #9c5f14;
+	--text: #4a3b2a; /* dark brown */
+	--muted-text: #6b5843; /* medium brown */
+	--bg: #f6eacc; /* light warm beige */
+	--surface: #fff8e6; /* near-white warm surface */
+	--border: #e3d3b2; /* soft beige border */
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+	color: var(--text);
+	background: var(--bg);
+}
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+/* Header and navigation */
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background: var(--surface);
+	border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	height: 64px;
+}
+
+.logo {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	text-decoration: none;
+	color: var(--text);
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.logo img {
+	display: block;
+	width: 28px;
+	height: 28px;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin-left: 8px;
+}
+
+.nav a {
+	text-decoration: none;
+	color: var(--muted-text);
+	font-weight: 600;
+	padding: 10px 12px;
+	border-radius: 8px;
+	transition: background-color 160ms ease, color 160ms ease;
+}
+
+.nav a:hover {
+	background: #f2e6c9;
+	color: var(--text);
+}
+
+.nav a.active {
+	color: var(--surface);
+	background: var(--accent);
+}
+
+/* Main content */
+.main {
+	padding: 28px 0 40px 0;
+}
+
+.hero {
+	padding: 24px;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+}
+
+.hero h1 {
+	margin: 0 0 8px 0;
+	font-size: 28px;
+}
+
+.hero p {
+	margin: 0;
+	color: var(--muted-text);
+	line-height: 1.6;
+}
+
+.section {
+	margin-top: 24px;
+	padding: 20px;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+}
+
+.section h2 {
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+.list {
+	margin: 0;
+	padding-left: 18px;
+	color: var(--muted-text);
+	line-height: 1.7;
+}
+
+/* Footer */
+.footer {
+	margin-top: 20px;
+	border-top: 1px solid var(--border);
+	padding: 18px 0;
+	color: var(--muted-text);
+	font-size: 14px;
+}
+
+.footer a { color: var(--accent-600); text-decoration: none; }
+.footer a:hover { color: var(--accent-700); text-decoration: underline; }
