@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Energy Visualisation</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="section">
+                <h1>TV Energy Visualisation Dashboard</h1>
+                <p style="font-size:1.1em;color:#555;">
+                    Explore the energy consumption and market price trends for televisions in Australia.<br>
+                    <span style="font-size:0.95em;">Source: Ex5 CSV files, Australian Energy Regulator</span>
+                </p>
+            </section>
+            <section class="section">
+                <h2 id="scatter-title">Scatter Plot: Energy Consumption vs Star Rating</h2>
+                <p>This chart shows the relationship between TV energy consumption and star rating. Each dot represents
+                    a TV model.</p>
+                <div id="scatter-plot" class="chart-container"
+                    aria-label="Scatter plot of energy consumption vs star rating"></div>
+                <div id="scatter-legend" class="legend-container"></div>
+            </section>
+
+            <section class="section">
+                <h2 id="donut-title">Donut Chart: Energy Consumption by Screen Technology (All TVs)</h2>
+                <p>This chart displays the total energy consumption for each screen technology across all TVs.</p>
+                <div id="donut-chart" class="chart-container"
+                    aria-label="Donut chart of energy consumption by screen technology"></div>
+                <div id="donut-legend" class="legend-container"></div>
+            </section>
+
+            <section class="section">
+                <h2 id="bar-title">Bar Chart: Energy Consumption by Screen Technology (55-inch TVs)</h2>
+                <p>This chart compares energy consumption for different screen technologies for 55-inch TVs only.</p>
+                <div id="bar-chart" class="chart-container"
+                    aria-label="Bar chart of energy consumption for 55-inch TVs"></div>
+                <div id="bar-legend" class="legend-container"></div>
+            </section>
+
+            <section class="section">
+                <h2 id="line-title">Line Chart: Spot Power Prices (1998–2024)</h2>
+                <p>This chart shows the trend of spot power prices over time. You can view the average or lines for each
+                    state.</p>
+                <div id="line-chart" class="chart-container" aria-label="Line chart of spot power prices"></div>
+                <div id="line-legend" class="legend-container"></div>
+            </section>
+        </div>
+    </main>
+    <footer style="margin-top:2em;font-size:0.95em;color:#888;">
+        &copy; 2025 EnergyWise Visualisation. Data sources: Australian Energy Regulator, GenAI-assisted code.
+    </footer>
+    <!-- Chart scripts -->
+    <script src="js/scatterPlot.js"></script>
+    <script src="js/donutChart.js"></script>
+    <script src="js/barChart.js"></script>
+    <script src="js/lineChart.js"></script>
+</body>
+
+</html>
